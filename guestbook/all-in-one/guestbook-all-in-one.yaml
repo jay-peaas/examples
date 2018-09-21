@@ -105,9 +105,11 @@ metadata:
 spec:
   # if your cluster supports it, uncomment the following to automatically create
   # an external load-balanced IP for the frontend service.
-  # type: LoadBalancer
+  type: LoadBalancer #added by Jay
   ports:
   - port: 80
+    protocol: TCP # Added By Jay
+    targetPort: 80 # Added By Jay
   selector:
     app: guestbook
     tier: frontend
